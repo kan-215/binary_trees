@@ -2,16 +2,16 @@
 
 /**
  * binary_tree_inorder - Goes through a binary tree using in-order traversal.
- * @tree: Pointer to the root node of the tree to traverse.
- * @func: Pointer to a function to call for each node.
- * Description: in-order traversing
+ * @tree: pointer to the root node of the tree to traverse.
+ * @func: pointer to a function to call for each node.
+ * Description:goes through a binary tree using in-order traversing
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 {
 	if (tree && func)
 	{
-		binary_tree_inorder(tree->left, func);
-		func(tree->n);
-		binary_tree_inorder(tree->right, func);
+	binary_tree_inorder(tree->left, func);
+	func(tree->n);
+	binary_tree_inorder(tree->right, func);
 	}
 }
